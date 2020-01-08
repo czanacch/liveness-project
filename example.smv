@@ -1,0 +1,11 @@
+MODULE main
+    VAR
+        x : boolean;
+        y : boolean;
+    ASSIGN
+        init(x) := FALSE;
+        init(y) := FALSE;
+        next(x) := FALSE;
+        next(y) := !y;
+
+INVARSPEC !y

@@ -1,0 +1,12 @@
+MODULE main
+    -- Model of the switch
+    VAR
+        x : 0..20;
+    ASSIGN
+        init(x) := 0;
+        next(x) := case
+            x < 10 : x + 1;
+            TRUE : x;
+        esac;
+        
+INVARSPEC x >= 10
